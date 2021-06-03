@@ -1,0 +1,74 @@
+/** Headers */
+#header {
+    position: relative;
+    height: 100px;
+}
+
+#header .logo img {
+    max-height: 80px;
+}
+/** End Headers **/
+
+/** Events **/
+
+.events {
+  padding-top: 0;
+}
+
+.events .nav-tabs {
+  border: 0;
+}
+
+.events .nav-link {
+  border: 0;
+  padding: 25px 20px;
+  transition: 0.3s;
+  color: #2b2320;
+}
+
+.events .nav-link:hover {
+  color: #0a4796;
+}
+
+.events .nav-link h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.events .nav-link p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.events .nav-link.active {
+  box-shadow: 0px 0 15px rgba(0, 0, 0, 0.12);
+  color: #0a4796;
+}
+
+.events .tab-pane.active {
+  -webkit-animation: slide-down 0.5s ease-out;
+  animation: slide-down 0.5s ease-out;
+}
+
+.events .tab-content {
+    position: relative;
+}
+.events .tab-bottom {
+    position: absolute;
+    width: 100%;
+    min-height: 80px;
+    background: rgba(255, 255, 255, .7);
+    bottom: 0;
+    border-top: 2px solid#0a4796;
+    padding: 0px 15px;
+}
+.events .tab-bottom a{
+    color: #0a4796;
+    text-decoration: none;
+    line-height: 80px;
+}
+.events .tab-bottom h4{
+    color: #0a4796;
+    text-decoration: none;
+    line-height: 80px;
+}
