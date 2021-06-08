@@ -7,10 +7,9 @@
         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
       </div>
 
-      <div class="entries">
-        <div class="row">
+      <div class="entries d-flex">
           @forelse ($news as $news_item)
-          <article class="entry col-lg-4 col-md-12 col-sm-12">
+          <div class="entry col-md-4 col-sm-12">
 
             <div class="entry-img">
               <img src="{{ Voyager::image($news_item->img ?? '') }}" alt="{{ $news_item->translate($locale)->title ?? '' }}" class="img-fluid">
@@ -48,13 +47,11 @@
               </div>
             </div>
 
-          </article><!-- End blog entry -->  
+          </div><!-- End blog entry -->  
           @empty
               
           @endforelse
         </div>
-      </div>
-
     </div>
 </section>
 <!-- End News Section -->

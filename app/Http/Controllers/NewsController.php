@@ -11,6 +11,14 @@ class NewsController extends Controller
     public function index(NewsRepository $newsRepository)
     {
         $news = $newsRepository->getAll();
-        return view('web.pages.news.index',['news' => $news]);
+        $other_news = $newsRepository->getAll()->take(5);
+        return view('web.pages.news.index',['news' => $news, 'other_news' => $other_news]);
+    }
+
+    public function show(Request $request, NewsRepository $newsRepository)
+    {
+        $news_item = $newsRepository->getBySlug($request);
+
+        return view('web.pages.news.show', ['news_item' => $news_item]);
     }
 }

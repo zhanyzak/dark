@@ -42,7 +42,7 @@
             <a href="#"><span>@if($locale == 'ru') Русский @elseif($locale == 'kz') Қазақша @elseif($locale == 'en') English @endif</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
                 @forelse (config('app.locales') as $key => $locale)
-                <li><a href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), $key)}}">{{ $locale }}</a></li>   
+                <li><a href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), [$key, request('slug') ?? ''])}}">{{ $locale }}</a></li>   
                 @empty
                     
                 @endforelse

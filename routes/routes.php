@@ -16,9 +16,9 @@ Route::group([
 
     /**Стр новости */
     Route::get('/news', [NewsController::class, 'index'])->name('news');
-    Route::get('/news/{slug}', [NewsController::class, 'show'])->name('newsShow');
+    Route::get('/news/{slug}', [NewsController::class, 'show'])->name('showNews');
 
     /**Стр событии */
     Route::get('/events', [EventController::class, 'index'])->name('events');
-    Route::get('/events/{slug}', [EventController::class, 'show'])->name('eventsShow');
+    Route::get('/events/{slug}', [EventController::class, 'show'])->name('showEvents');
 });
